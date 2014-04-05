@@ -352,6 +352,8 @@
             if (typeof option === 'string') {
                 //调用option,且参数长度最多为1
                 data[option].apply(data, Array.prototype.slice.call(args, 1));
+                //把 arguments 当做当前对象
+                //也就是说 要调用的是 arguments 的slice 方法，后面的 参数 1 也就成了 slice 的第一个参数slice(1)就是获取所有
             }
         });
     }; 
